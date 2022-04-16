@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>熊本熊::before/::after</title>
+  <style>
+    .container {
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .face {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: #000;
+      position: relative;
+    }
+
+    .face::before {
+      content: '';
+      width: 80px;
+      height: 80px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      right: 80%;
+      transform: translate(0, -50%);
+    }
+
+    .face::after {
+      content: '';
+      width: 80px;
+      height: 80px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 80%;
+      transform: translate(0%, -50%);
+    }
+
+    .ears::before {
+      content: '';
+      width: 10%;
+      height: 10%;
+      background: #fff;
+      border-radius: 50%;
+      border: 10px solid #000;
+      position: absolute;
+      left: 20px;
+    }
+
+    .ears::after {
+      content: '';
+      width: 10%;
+      height: 10%;
+      background: #fff;
+      border-radius: 50%;
+      border: 10px solid #000;
+      position: absolute;
+      right: 20px;
+    }
+
+    .eye::before {
+      content: '';
+      width: 13%;
+      height: 13%;
+      background: #000;
+      border-radius: 50%;
+      border: 10px solid #fff;
+      position: absolute;
+      left: 62px;
+      top: 60px;
+    }
+
+    .eye::after {
+      content: '';
+      width: 13%;
+      height: 13%;
+      background: #000;
+      border-radius: 50%;
+      border: 10px solid #fff;
+      position: absolute;
+      right: 62px;
+      top: 60px;
+    }
+
+
+    .mouth {
+      width: 45%;
+      height: 30%;
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      transform: translate(-50%, -55%);
+    }
+
+    .mouth::before {
+      content: '';
+      width: 60%;
+      height: 35%;
+      background: #000;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 70%;
+      transform: translate(-50%, -70%);
+    }
+
+    .mouth::after {
+      content: '';
+      width: 20%;
+      height: 20%;
+      background: #000;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translate(-50%, -10%);
+    }
+
+    .beard::before {
+      content: '';
+      width: 13%;
+      height: 13%;
+      background: #fff;
+      position: absolute;
+      left: 35%;
+      bottom: 10%;
+      /* transform: translate(-30%, 10%); */
+      transform: skew(45deg);
+    }
+
+    .beard::after {
+      content: '';
+      width: 13%;
+      height: 13%;
+      background: #fff;
+      position: absolute;
+      right: 35%;
+      bottom: 10%;
+      /* transform: translate(30%, 10%); */
+      transform: skew(-45deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="face">
+      <div class="ears"></div>
+      <div class="eye"></div>
+      <div class="mouth"></div>
+      <div class="beard"></div>
+    </div>
+  </div>
+</body>
+
+</html>
